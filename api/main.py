@@ -26,7 +26,7 @@ app.config["DEBUG"] = DEBUG
 @app.route("/new-image")
 def new_image():
     """Function to get new image from unsplash"""
-    word = request.args.get("query")
+    word = request.args.get("query")    
     headers = {"Accept-Version": "v1", "Authorization": "Client-ID " + UNSPLASH_KEY}
     params = {"query": word}
     response = requests.get(
